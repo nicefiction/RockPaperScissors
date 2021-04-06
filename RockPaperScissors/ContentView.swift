@@ -1,21 +1,41 @@
-//
-//  ContentView.swift
-//  RockPaperScissors
-//
-//  Created by Olivier Van hamme on 06/04/2021.
-//
+// MARK: ContentView.swift
+
+
+
+ // ////////////////
+//  MARK: LIBRARIES
 
 import SwiftUI
 
+
+
+
+ // //////////////////////////////////
+//  MARK: struct ContentView: View { }
+
 struct ContentView: View {
+    
+     // //////////////////////////
+    //  MARK: COMPUTED PROPERTIES
+    
     var body: some View {
+        
         Text("Hello, world!")
             .padding()
     }
 }
 
+
+
+
+
+ // ///////////////
+//  MARK: PREVIEWS
+
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ContentView()
+        
+        ContentView().previewDevice("iPhone 12 Pro")
     }
 }
