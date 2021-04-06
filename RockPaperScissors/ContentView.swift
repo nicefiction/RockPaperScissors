@@ -62,16 +62,12 @@ struct ContentView: View {
                 Button(action : {
                     tapButtonWith(index : index)
                 } , label : {
-                    ZStack {
-                        Circle()
-                            .foregroundColor(Color.orange)
-                        Text(rockPaperScissors[index])
-                            .font(.system(size: 80.0))
-                    }
+                    ItemView(index : index ,
+                             arrayOfItems : rockPaperScissors)
                 })
                 .alert(isPresented : $isShowingGameRoundOutcomeAlert) {
                     Alert(title : Text(roundFeedback) ,
-                          message : Text("Your new game score : \(gameScore)") ,
+                          message : Text("Your new game score is \(gameScore)") ,
                           dismissButton : .default(Text("Continue")) {
                             
                             startNewRound()
@@ -79,11 +75,8 @@ struct ContentView: View {
                 }
             }
            
-            VStack(spacing : 12) {
-                Text("Your score : \(gameScore)")
-                Text("Round \(gameRound) of 10")
-            }
-            .font(.subheadline)
+            GameFeedbackView(gameScore : gameScore ,
+                             gameRound : gameRound)
         }
     }
     
