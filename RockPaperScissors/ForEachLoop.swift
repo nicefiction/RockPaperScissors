@@ -1,21 +1,26 @@
 // MARK: ForEachLoop.swift
 
-
-
 import SwiftUI
 
 
 
-
+ // //////////////////////////////////
+//  MARK: struct ForEachLoop: View { }
 
 struct ForEachLoop: View {
     
+     // /////////////////
+    //  MARK: PROPERTIES
     
     let humans: [String] = [
         
         "Dorothy" , "Glinda" , "Ozma" , "Dahlia" , "Olivia"
     ]
     
+    
+    
+     // //////////////////////////
+    //  MARK: COMPUTED PROPERTIES
     
     var body: some View {
         
@@ -39,14 +44,11 @@ struct ForEachLoop: View {
 }
 
 
-import SwiftUI
 
 
 
-
-
-
-
+ // ///////////////
+//  MARK: PREVIEWS
 
 struct ForEachLoop_Previews: PreviewProvider {
     
